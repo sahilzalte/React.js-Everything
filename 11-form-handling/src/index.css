@@ -1,0 +1,83 @@
+/* Page Background */
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #0d0f16;
+  font-family: 'Poppins', sans-serif;
+  
+}
+body{
+   background: #0d0f16;
+}
+
+/* Form Container */
+form {
+ 
+  padding: 32px;
+  border-radius: 14px;
+  width: 320px;
+  box-shadow: 0 0 20px rgba(0, 255, 170, 0.1);
+  backdrop-filter: blur(8px);
+  animation: fadeIn 0.5s ease;
+}
+
+/* Label */
+label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: #c7d1ff;
+}
+
+/* Input */
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  background: #1c2030;
+  border: 2px solid #2a3147;
+  border-radius: 10px;
+  outline: none;
+  color: #eef1ff;
+  transition: 0.3s ease;
+  margin-bottom: 18px;
+}
+
+/* Input Focus */
+input[type="text"]:focus {
+  border-color: #00ffaa;
+  box-shadow: 0 0 8px rgba(0, 255, 170, 0.5);
+}
+
+/* Submit Button */
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #00ffaa, #00c2ff);
+  color: #0d0f16;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Hover */
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 12px rgba(0, 255, 170, 0.5);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
