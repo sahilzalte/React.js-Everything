@@ -1,0 +1,108 @@
+/* Full Page */
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #0a0c12;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #eaf0ff;
+
+}
+
+/* Form */
+form {
+  background: #131722;
+  padding: 35px;
+  width: 350px;
+  border-radius: 14px;
+  box-shadow: 0 0 22px rgba(0, 255, 153, 0.08);
+  animation: fadeIn 0.6s ease;
+}
+
+/* Label */
+label {
+  display: block;
+  margin-bottom: 6px;
+  color: #cfd7f6;
+  font-size: 15px;
+}
+
+/* Input */
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #262c3e;
+  outline: none;
+  background: #1b2130;
+  color: #eaf0ff;
+  margin-bottom: 15px;
+  transition: 0.25s ease;
+  font-size: 15px;
+}
+
+/* Input Focus */
+input[type="text"]:focus {
+  border-color: #00ff9d;
+  box-shadow: 0 0 10px rgba(0, 255, 157, 0.4);
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background: linear-gradient(135deg, #00ff9d, #00b7ff);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #0b0e13;
+  transition: 0.3s ease;
+}
+
+/* Button Hover */
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 14px rgba(0, 255, 157, 0.5);
+}
+
+/* Live Preview Heading */
+h1 {
+  text-align: center;
+  margin-top: 18px;
+  color: #00ffcc;
+  font-size: 22px;
+  letter-spacing: 1px;
+  animation: glow 2s infinite alternate;
+}
+
+/* Glow Animation */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px rgba(0, 255, 157, 0.4);
+  }
+
+  to {
+    text-shadow: 0 0 14px rgba(0, 255, 157, 0.8);
+  }
+}
+
+/* Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
