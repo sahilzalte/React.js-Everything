@@ -4,19 +4,11 @@ import axios from 'axios'
 const App = () => {
   const [userData, setUserData] = useState([]);
 
-  const [index, setIndex] = useState(1)
-
-
 
   const getData = async () => {
     let response = await axios.get('https://jsonplaceholder.typicode.com/todos/1')
-    console.log(response)
+    setUserData(response.data);
   }
-
-  useEffect(function () {
-    getData()
-  }, [index])
-
   return (
     <div className="bg-black h-screen p-4 text-white">
       <button onClick={getData} className="bg-green-600 text-white px-5 py-2 mb-2 rounded active:scale-95 cursor-pointer">Get Data</button>
