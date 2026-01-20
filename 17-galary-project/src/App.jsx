@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
 const App = () => {
@@ -10,9 +10,15 @@ const App = () => {
     setUserData(response.data);
   }
 
-  console.log(userData);
 
-  let printUserData = 'No user Available';
+  useEffect(() => {
+    getData();
+  }, [])
+
+
+
+  let printUserData = <h3 className='text-gray-300 text-xs absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-semibold'>Loading...</h3>
+
 
   if (userData.length > 0) {
     printUserData = userData.map(function (elem, idx) {
@@ -30,12 +36,15 @@ const App = () => {
 
   return (
     <div className="bg-black overflow-auto h-screen p-4 text-white">
-      <button onClick={getData} className="bg-green-600 text-white px-5 py-2 mb-2 rounded active:scale-95 cursor-pointer">Get Data</button>
 
-      <div className="flex flex-wrap gap-4">
+      <div className="flex flex-wrap gap-4 p-2">
 
         {printUserData}
 
+      </div>
+      <div className="flex justify-center gap-6 items-center p-4">
+        <button className='bg-amber-400 cursor-pointer active:scale-95 text-sm text-black rounded px-4 font-semibold py-4'>Prev</button>
+        <button className='bg-amber-400 cursor-pointer active:scale-95 text-sm text-black rounded px-4 font-semibold py-4'>Next</button>
       </div>
     </div>
   )
